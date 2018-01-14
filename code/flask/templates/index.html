@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Text Summarizer</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="../static/css/ie/html5shiv.js"></script><![endif]-->
+		<script src="../static/js/jquery.min.js"></script>
+		<script src="../static/js/jquery.dropotron.min.js"></script>
+		<script src="../static/js/jquery.scrolly.min.js"></script>
+		<script src="../static/js/jquery.scrollgress.min.js"></script>
+		<script src="../static/js/skel.min.js"></script>
+		<script src="../static/js/skel-layers.min.js"></script>
+		<script src="../static/js/init.js"></script>
+		<link rel="stylesheet" href="../static/css/skel.css" />
+		<link rel="stylesheet" href="../static/css/style.css" />
+		<link rel="stylesheet" href="../static/css/style-wide.css" />
+		<link rel="stylesheet" href="../static/css/style-noscript.css" />
+		
+		<!--[if lte IE 8]><link rel="stylesheet" href="../static/css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="../static/css/ie/v9.css" /><![endif]-->
+	</head>
+	<body class="index">
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<h1 id="logo"><a href="/">Text Summarizer</a></h1>
+				<nav id="nav">
+					<ul>
+						<li class="current"><a href="/">Welcome</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+
+				<!--
+					".inner" is set up as an inline-block so it automatically expands
+					in both directions to fit whatever's inside it. This means it won't
+					automatically wrap lines, so be sure to use line breaks where
+					appropriate (<br />).
+				-->
+				<div class="inner">
+
+					<header>
+						<h2>Text Summarizer</h2>
+					</header>
+					<p>Semantic Web Technology Project By :
+					<br />
+					Bhuvan M S - 12IT16
+					<br />
+					Vinay Rao D - 12IT94
+					<br />
+					</p>
+					<footer>
+						<ul class="buttons vertical">
+							<li><a href="#main" class="button fit scrolly">Show!</a></li>
+						</ul>
+					</footer>
+
+				</div>
+
+			</section>
+
+		<!-- Main -->
+			<article id="main">
+				<!-- One -->
+					<section class="wrapper style container special-alt">
+						<h2>Please paste your text here</h2>
+					<br />
+					<form id="one" method="post" action="{{ url_for('show') }}" name="one">
+					<textarea name="text">Enter your text here</textarea>
+					<br />
+					<ul class="buttons">
+						<li><input type="submit" class="button fit scrolly" value="Summarize"></input></li>
+					</ul>
+					</form>
+					</section>
+			</article>
+			
+			<article id="results">
+				<section class="wrapper style container special-alt">
+				<h2>Summarized text</h2>
+				<p>{{ text }}</p>
+				</section>
+			</article>
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="copyright">
+					<li>&copy; RaoD</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+
+			</footer>
+
+	</body>
+</html>
